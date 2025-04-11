@@ -1,4 +1,8 @@
-
+<div class="flex items-center justify-center min-h-screen">
+<div class="mx-auto rounded-lg shadow-lg mx-auto max-h-screen flex ">
+    <div class="max-w-md h-full">
+    <img src="./image/image.png"  class="w-full h-full object-cover" alt="">
+</div>
   <div class="bg-white p-8  w-full max-w-md rounded-lg py-20">
     <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Connexion</h2>
     <form action="" method="POST" class="space-y-4">
@@ -21,4 +25,6 @@
       Vous n'avez pas de compte ?
       <a href="inscription.php" class="text-[#9E0E40] hover:underline">Inscrivez-vous</a>
     </p>
+  </div>
+
   </div>

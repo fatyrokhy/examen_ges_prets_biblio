@@ -13,11 +13,8 @@
       }
   </style>
 </head>
-<body class="bg-white flex items-center justify-center min-h-screen">
-<div class="mx-auto rounded-lg shadow-lg mx-auto max-h-screen flex ">
-    <div class="max-w-md h-full">
-    <img src="./image/image.png"  class="w-full h-full object-cover" alt="">
-</div>
+<body class="bg-white ">
+
 <?= $contenu ?>
 </div>
 </body>
