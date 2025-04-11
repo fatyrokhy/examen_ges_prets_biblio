@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once("../config/database.php");
-define('PAGE','http://faty.niass.ecole221.sn:8000/?');
+define('PAGE','http://faty.niass.ecole221.sn:8001/?');
+define('ROOTPATH', dirname(__DIR__));
+
 if (isset($_REQUEST["controller"])) {
     $controller=$_REQUEST["controller"];
     if ($controller=="loginController") {
@@ -10,7 +12,9 @@ if (isset($_REQUEST["controller"])) {
         require_once("../app/controller/ouvrageController.php");
     }  else if ($controller=="dashboardController") {
         require_once("../app/controller/dashboardController.php");
+    } else if ($controller=="visiteurController") {
+        require_once("../app/controller/visiteurController.php");
     }
 } else {
-    require_once("../app/controller/loginController.php");
+require_once(ROOTPATH . "/app/controller/visiteurController.php");
 }
