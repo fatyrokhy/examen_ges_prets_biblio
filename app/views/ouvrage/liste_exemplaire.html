@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplaires - Bibliotech 221</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="bg-[#9E0E40] w-64 text-white flex flex-col px-4 py-6">
+            <div class="text-2xl font-bold mb-10">BIBLIOTECH<br>221</div>
+
+            <nav class="space-y-4">
+                <a href="dashboard.html"
+                    class="flex items-center gap-2 px-3 py-2 hover:text-white hover:bg-[#b3205a] rounded-full">
+                    <i class="ri-dashboard-line text-lg"></i> Dashboard
+                </a>
+                <a href="liste_ouvrage.html"
+                    class="flex items-center gap-2 px-3 py-2 bg-white text-[#9E0E40] rounded-full font-semibold ">
+                    <i class="ri-book-2-line text-lg"></i> Ouvrages
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:text-white hover:bg-[#b3205a] rounded-full">
+                    <i class="ri-user-3-line text-lg"></i> Auteurs
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:text-white hover:bg-[#b3205a] rounded-full">
+                    <i class="ri-layout-line text-lg"></i> Rayons
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:text-white hover:bg-[#b3205a] rounded-full">
+                    <i class="ri-book-open-line text-lg"></i> Exemplaires
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:text-white hover:bg-[#b3205a] rounded-full">
+                    <i class="ri-exchange-box-line text-lg"></i> Prêts
+                </a>
+            </nav>
+        </div>
+
+        <!--  contenu -->
+        <div class="flex-1">
+            <!-- Top bar -->
+            <div class="flex  justify-between items-center mb-6 bg-white shadow p-2">
+                <div class="flex items-center gap-2 bg-gray-200 px-3 py-1 rounded-full w-1/2">
+                    <input type="text" class="bg-transparent focus:outline-none flex-1 " placeholder="Rechercher..." />
+                    <button class="bg-[#9E0E40] text-white px-4 py-1 rounded-full  text-sm">OK</button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#9E0E40] font-semibold">Rokhaya Niass</span>
+                    <img src="./image/Rectangle 43.png" class="w-10 h-10 rounded-full" alt="avatar" />
+                </div>
+            </div>
+
+            <!-- Filter bar -->
+            <div
+                class="bg-white grid grid-cols-1 md:grid-cols-[30%_auto] mx-6 md:bg-white md:shadow p-4  flex items-center mb-6">
+                <h2 class="text-lg font-semibold  ">liste de ses exemplaires</h2>
+                <div class=" flex items-center gap-2 place-self-end ">
+                    <input type="text" placeholder="filtrer par statut ..."
+                        class="border px-4 py-2 rounded-full w-full h-8  ">
+                    <button class="bg-[#9E0E40] text-white px-6 py-2 rounded-full h-8">Filtrer</button>
+                </div>
+            </div>
+           
+            <!-- Emprunts -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
+                <!--  Carte  -->
+                <div class="bg-white shadow p-4 rounded-lg border flex flex-wrap gap-2 ">
+                    <div class="flex gap-4 items-center">
+                        <img src="./image/image.png" class="w-14 h-14 rounded-lg shadow-md " alt="">
+                        <p class="font-bold text-[#9E0E40]">un petit mensonge</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-sm">Code : 11213</p>
+                        <p class="text-sm">Date d'enregistrement : 2021-02-12</p>
+                        <p class="text-sm">statut : <span class="text-[#9E0E40] font-semibold">disponible</span></p>
+                    </div>
+                    <div class="flex gap-2 mt-3 text-xs">
+                        <button class="bg-[#9E0E40] text-white px-3 py-1 rounded-xl">
+                            <a href="archiver.html">Archiver</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- 2eme carte  -->
+                <div class="bg-white shadow p-4 rounded-lg border flex flex-wrap gap-2 ">
+                    <div class="flex gap-4 items-center">
+                        <img src="./image/image.png" class="w-14 h-14 rounded-lg shadow-md " alt="">
+                        <p class="font-bold text-[#9E0E40]">un petit mensonge</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-sm">Code : 11213</p>
+                        <p class="text-sm">Date d'enregistrement : 2021-02-12</p>
+                        <p class="text-sm">statut : <span class="text-[#9E0E40] font-semibold">disponible</span></p>
+                    </div>
+                    <div class="flex gap-2 mt-3 text-xs">
+                        <button class="bg-[#9E0E40] text-white px-3 py-1 rounded-xl">
+                            <a href="archiver.html">Archiver</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- 3eme carte  -->
+                <div class="bg-white shadow p-4 rounded-lg border flex flex-wrap gap-2 ">
+                    <div class="flex gap-4 items-center">
+                        <img src="./image/image.png" class="w-14 h-14 rounded-lg shadow-md " alt="">
+                        <p class="font-bold text-[#9E0E40]">un petit mensonge</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-sm">Code : 11213</p>
+                        <p class="text-sm">Date d'enregistrement : 2021-02-12</p>
+                        <p class="text-sm">statut : <span class="text-[#9E0E40] font-semibold">disponible</span></p>
+                    </div>
+                    <div class="flex gap-2 mt-3 text-xs">
+                        <button class="bg-[#9E0E40] text-white px-3 py-1 rounded-xl">
+                            <a href="archiver.html">Archiver</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination  -->
+            <div class="flex justify-center mt-6">
+                <nav class="inline-flex rounded-md shadow-sm isolate" aria-label="Pagination">
+                    <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-[#9E0E40] bg-white border border-gray-300 rounded-l-md hover:bg-gray-100">Précédent</a>
+                    <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[#9E0E40] border border-gray-300 hover:bg-red-700">1</a>
+                    <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-[#9E0E40] bg-white border border-gray-300 hover:bg-gray-100">2</a>
+                    <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-[#9E0E40] bg-white border border-gray-300 rounded-r-md hover:bg-gray-100">Suivant</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
