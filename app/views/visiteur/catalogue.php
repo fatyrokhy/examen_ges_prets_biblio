@@ -24,27 +24,33 @@
     <!-- Catalogue + filtre -->
     <div class="bg-[#9E0E40] text-white px-6 py-3 rounded-t-lg flex justify-between items-center">
         <h3 class="text-lg font-semibold">Catalogue</h3>
-        <form class="flex items-center gap-2">
-            <input type="text" placeholder="filtrer par statut..."
-                class="rounded-full h-8 px-4 text-sm text-black focus:outline-none">
-            <button type="submit" class="bg-white text-[#9E0E40] rounded-full px-4 h-8 text-sm font-semibold">Filtrer</button>
-        </form>
+        <?php //foreach ($rayon as $valu): ?>
+            <form class="flex items-center gap-2">
+                <input type="hidden" name="controller" value="visiteurController">
+                <input type="hidden" name="page" value="catalogue">
+                <select name="statut" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                    <option value="<?= $valu["nom"] ?>" <?= (isset($_GET['statut']) && $_GET['statut'] === $valu["nom"]) ? 'selected' : '' ?>><?= $valu["nom"] ?></option>
+                </select>
+                <button type="submit" class="bg-white text-[#9E0E40] rounded-full px-4 h-8 text-sm font-semibold">Filtrer</button>
+            </form>
+        <?php //endforeach ?>
     </div>
 
     <!-- Cartes ouvrages -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-6 rounded-b-lg">
         <!-- Ouvrage -->
         <?php if ($dispo != null): ?>
-            <?php foreach ($dispo as $value): ?>
+            <?php foreach ($dispo as $value):
+            ?>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="<?php $value["image"]; 
-                    var_dump($value["image"])?>" alt="Livre" class="w-full h-40 object-cover">
+                    <img src="<?= $value["image"];
+                                ?>" alt="Livre" class="w-full h-40 object-cover">
                     <div class="p-4 flex flex-col gap-2">
-                        <h4 class="text-[#9E0E40] font-bold"><?php $value["titre"] ?></h4>
-                        <p class="text-sm text-gray-600"><?php $value["description"] ?></p>
+                        <h4 class="text-[#9E0E40] font-bold"><?= $value["titre"] ?></h4>
+                        <p class="text-sm text-gray-600"><?= $value["description"] ?></p>
                         <div class="flex justify-between text-sm">
-                            <span class="font-semibold"><?php $value["date_edition"] ?></span>
-                            <span class="text-[#9E0E40]"><?php $value["nom"] ?></span>
+                            <span class="font-semibold"><?= $value["date_edition"] ?></span>
+                            <span class="text-[#9E0E40]"><?= $value["nom"] ?></span>
                         </div>
                         <button class="mt-2 bg-[#9E0E40] text-white px-4 py-1 rounded-full text-sm w-fit">Emprunter</button>
                     </div>
